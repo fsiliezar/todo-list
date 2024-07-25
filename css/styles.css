@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --negro: #000000;
+    --blanco: #ffffff;
+    --oscuro-cafe: #3e0202;
+    --rojo: #b31515;
+    --amarillo: #f4b911;
+    --negro-claro: #474545;
+
+
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: var(--negro);
+}
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.contenedor {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*PRIMER DIV*/
+#fecha {
+    color: var(--blanco);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+.mensaje h1 {
+    color: var(--amarillo);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.mensaje span {
+    color: var(--blanco);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*SEGUNDO DIV*/
+.agregar-tarea {
+    background-color: white;
+    border-radius: 10px;
+    height: 5rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agregar-tarea input {
+    flex: 1;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--blanco);
+    padding: 0 1rem;
+    color: var(--cafe);
+}
+
+.agregar-tarea i {
+    font-size: 2.7rem;
+    color: var(--cafe);
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.agregar-tarea i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: var(--amarillo);
+}
+
+.agregar-tarea input::placeholder {
+    font-size: 1rem;
+    color: var(--cafe);
+}
+
+/*TERCER DIV*/
+
+.lista-tarea {
+    color: var(--blanco);
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+.lista-tarea li {
+    display: flex;
+    background: var(--negro-claro);
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lista-tarea i {
+    font-size: 1.5rem;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.lista-tarea>ul p {
+    font-size: 1rem;
+}
+
+.lista-tarea i:hover {
+    color: var(--amarillo);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.text.line-through {
+    text-decoration: line-through; /* Subrayado */
+    color: var(--blanco); /* Cambia el color si deseas un efecto visual diferente */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transiciones suaves */
+}
+
+
+/* Media Queries-768px*/
+@media (min-width: 768px) {
+    .contenedor {
+        max-width: 75%;
+    }
+
+    .mensaje h1 {
+        font-size: 2.5rem;
+    }
+
+    .agregar-tarea {
+        height: 4rem;
+        width: 60%;
+    }
+
+    .agregar-tarea input {
+        font-size: 1.1rem;
+    }
+
+    .agregar-tarea i {
+        font-size: 2.5rem;
+    }
+
+    .lista-tarea li {
+        padding: 1rem 1.5rem;
+    }
+
+    .lista-tarea>ul p {
+        font-size: 1.1rem;
+    }
+}
+
